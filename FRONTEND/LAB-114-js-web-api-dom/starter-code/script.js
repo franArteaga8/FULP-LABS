@@ -4,16 +4,16 @@ console.log("Hi, hello");
 // SUBTOTAL AUTO UPDATE
 
 const qtyInput = document.querySelectorAll("input");
-const subtotalElement = document.getElementsByClassName("subtotal");
-[...qtyInput].map((e) =>
-  e.addEventListener("change", () => {
-    let subtotalItem = document.getElementsByClassName("subtotal")[0];
-    let costItem = parseFloat(
-      document.getElementsByClassName("cost")[0].innerText
-    );
-    subtotalItem.innerText = e.value * costItem + "€";
-  })
-);
+
+[...qtyInput].forEach((input) => {
+  input.addEventListener("change", () => {
+    const parentProduct = input.closest(".product"); // Find the closest product container
+    const subtotalItem = parentProduct.querySelector(".subtotal"); // Find the subtotal within the product container
+    const costItem = parseFloat(parentProduct.querySelector(".cost").innerText); // Find the cost within the product container
+
+    subtotalItem.innerText = input.value * costItem + "€";
+  });
+});
 
 // CALCULATE TOTAL PRICE
 
@@ -31,6 +31,14 @@ totalPriceButton.addEventListener("click", () => {
 // DELETE ITEM
 
 const deleteButtons = document.getElementsByClassName("delete");
+console.log(deleteButtons);
+
+[...deleteButtons].map((e) =>
+  e.addEventListener("click", () => {
+    console.log(e.parente);
+    e.parentElement.remove();
+  })
+);
 function deleteItem(e) {}
 
 //
