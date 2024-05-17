@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/FRONTEND/LAB-114-js-web-api-dom/starter-code/style.css"
-    />
-    <script src="/FRONTEND/LAB-114-js-web-api-dom/starter-code/index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB-114</title>
+  
+    </head>
+    <script src="./script.js" defer></script>
+</head>
+<body style="display: flex; justify-content: center; font-family: monospace;">
 
-    <title>Reboot Academy shopping center</title>
-  </head>
-  <body>
-    <h1>Reboot Academy Shopping Center</h1>
+    <div style=" width: 80%; background-color: whitesmoke; border: 1px solid; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; align-self: center;">
+        <h1>Shopping Center</h1>
 
-    <div class="wrapper">
-      <div><span class="itemName">Camiseta</span></div>
-      <div><span class="itemUnitPrice">25</span></div>
-      <div>
-        <span class="quantity">QTY <input type="number" value="1" /></span>
-      </div>
-      <div><span class="totalPricePerItem">0€</span></div>
-      <div>
-        <span
-          ><button class="btn btn-delete" type="button">Delete</button></span
-        >
-      </div>
-    </div>
+        <div class="products" style=" width: 80%;display: flex; justify-content: space-between;padding:10px; margin: 10px; border-bottom: 1px solid #ccc;">
+            <div>
+                <span class="name">Camiseta</span>
+            </div>
+            <div class="cost">
+                <span>25</span>
+            </div>
+            <div >
+                <label for="QTY">QTY</label>
+                <input type="number" name="QTY" class="qty" min="0">
+            </div>
+               <span class="subtotal">0€</span>
+            <button>Delete</button>
+        </div>
+        
+        <div class="products" style="width: 80%;display: flex; justify-content: space-between;padding: 10px; margin: 10px; border-bottom: 1px solid #ccc;">
+            <div>
+                <span class="name">Pantalón</span>
+            </div>
+            <div>
+                <span class="cost">15</span>
+            </div>
+            <div>
+                <label for="QTY">QTY</label>
+                <input type="number" name="QTY" class="qty" min="0">
+            </div>
+            <div>
+                <span class="subtotal">0€</span>
+            </div>
+            <button>Delete</button>
+        </div>
 
-    <div class="wrapper">
-      <div><span class="itemName">Pantalon</span></div>
-      <div><span class="itemUnitPrice">10</span></div>
-      <div>
-        <span class="quantity">QTY <input type="number" value="1" /></span>
-      </div>
-      <div><span class="totalPricePerItem">0€</span></div>
-      <div>
-        <span
-          ><button class="btn btn-delete" type="button">Delete</button></span
-        >
-      </div>
-    </div>
+        <div class="flex">
+          <button id="calcTotalPrice" style="margin-top: 2%;">Calculate Prices</button>
 
-    <div id="calc-prices-button">
-      <button id="calc-prices" class="btn btn-success">Calculate Prices</button>
+          <h2>Total Price: <span id="totalAmount">0</span>€</h2>
+        </div>
+       
+        
     </div>
-    <div class="totalPrice">
-      <h2>Total Price: <span class="allItemsTotalPrice">0€</span></h2>
-    </div>
-  </body>
+    
+
+    
+    
+</body>
 </html>
