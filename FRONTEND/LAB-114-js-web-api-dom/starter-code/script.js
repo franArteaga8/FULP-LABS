@@ -19,12 +19,10 @@ const qtyInput = document.querySelectorAll("input");
 
 const totalPriceButton = document.getElementById("calcTotalPrice");
 const totalAmount = document.getElementById("totalAmount");
-
-console.log(totalAmount.innerText);
+const subtotalElement = document.getElementsByClassName("subtotal");
 
 totalPriceButton.addEventListener("click", () => {
   const subtotals = [...subtotalElement].map((e) => parseInt(e.innerText));
-  console.log(subtotals);
   totalAmount.innerText = subtotals.reduce((acc, curr) => acc + curr, 0);
 });
 
@@ -35,17 +33,27 @@ console.log(deleteButtons);
 
 [...deleteButtons].map((e) =>
   e.addEventListener("click", () => {
-    console.log(e.parente);
     e.parentElement.remove();
   })
 );
-function deleteItem(e) {}
+
+// CREATE NEW PRODUCT
+
+const addButton = document.getElementById("addButton");
+const products = document.getElementById("products");
+
+addButton.addEventListener("click", () => {
+  console.log("HERE2");
+  products.appendChild(document.createElement("p").textContent);
+  console.log(products);
+});
+
+function createNewItemRow(itemName, itemUnitPrice) {}
 
 //
 function getPriceByProduct(itemNode) {}
 function updatePriceByProduct(productPrice, index) {}
 
-function createNewItemRow(itemName, itemUnitPrice) {}
 function createNewItem() {}
 // window.onload = function () {
 //   var calculatePriceButton = document.getElementById("calc-prices-button");
