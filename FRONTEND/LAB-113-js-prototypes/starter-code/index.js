@@ -7,7 +7,7 @@ console.log("js loaded succesfully");
 // guerra.saxonAttack(); // Simulate a Saxon attack on a Viking
 
 // Show the current status of the war
-// console.log(guerra.showStatus()); // Display the outcome of the war based on the state of the armies
+//guerra.showStatus(); // Display the outcome of the war based on the state of the armies
 
 // Check the state of the Viking and Saxon armies
 // console.log("Viking Army:", guerra.vikingArmy); // Display the current state of the Viking army
