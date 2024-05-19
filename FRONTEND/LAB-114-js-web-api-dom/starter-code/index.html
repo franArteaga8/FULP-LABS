@@ -15,38 +15,39 @@
 
         <div id="products" style="width: 80%;">
 
-        
-            <div class="product" style="display: flex; justify-content: space-between;padding:10px; margin: 10px; border-bottom: 1px solid #ccc;">
+            <div class="product" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr auto; gap: 10px; padding: 10px; margin: 10px; border-bottom: 1px solid #ccc; align-items: center;">
                 <div>
-                    <span class="name">Camiseta</span>
+                  <span class="name">Camiseta</span>
                 </div>
                 <div class="cost">
-                    <span>25</span>
+                  <span>25.00</span>
                 </div>
-                <div >
-                    <label for="QTY">QTY</label>
-                    <input type="number" name="QTY1" class="qty" min="0">
+                <div>
+                  <label for="QTY">QTY</label>
+                  <input type="number" name="QTY1" class="qty" min="0">
                 </div>
                 <span class="subtotal">0€</span>
-                <button class="delete">Delete 1</button>
-            </div>
-        
-            <div class="product" style="display: flex; justify-content: space-between;padding: 10px; margin: 10px; border-bottom: 1px solid #ccc;">
+                <button class="delete">Delete</button>
+              </div>
+
+              <div class="product" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr auto; gap: 10px; padding: 10px; margin: 10px; border-bottom: 1px solid #ccc; align-items: center;">
                 <div>
-                    <span class="name">Pantalón</span>
+                  <span class="name">Pantalón</span>
+                </div>
+                <div class="cost">
+                  <span>15.00</span>
                 </div>
                 <div>
-                    <span class="cost">15</span>
+                  <label for="QTY">QTY</label>
+                  <input type="number" name="QTY1" class="qty" min="0">
                 </div>
-                <div>
-                    <label for="QTY">QTY</label>
-                    <input type="number" name="QTY2" class="qty" min="0">
-                </div>
-                <div>
-                    <span class="subtotal">0€</span>
-                </div>
-                <button class="delete">Delete 2</button>
-            </div>
+                <span class="subtotal">0€</span>
+                <button class="delete">Delete</button>
+              </div>
+              
+              
+
+
         </div>
 
         <div id="add" style="width: 80%; display: flex; justify-content: center; margin: 20px;"><button id="addButton" style= "padding: 5px 20px; border: 1px solid black; border-radius: 10px; font-weight: 900;"> + </button></div>
