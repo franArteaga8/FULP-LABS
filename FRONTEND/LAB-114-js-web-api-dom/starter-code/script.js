@@ -1,3 +1,4 @@
+//INITIAL CONSOLE LOG
 console.log("Hi, hello");
 
 // SUBTOTAL AUTO UPDATE
