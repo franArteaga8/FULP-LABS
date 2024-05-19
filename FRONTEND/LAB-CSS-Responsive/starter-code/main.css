@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  color: white;
+  width: 100%;
+  height: calc(50px + 1.5vw);
+  background-color: black;
+}
+.navbar img {
+  height: 225%;
+  padding: 5px;
+  object-fit: cover;
+}
+.other-links {
+  width: 350px;
+  margin-right: 25px;
+}
+.content {
+  background-image: url(https://slidechef.net/wp-content/uploads/2022/09/Physics-project-front-page.jpg);
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+.profile {
+  color: white;
+  background-color: rgb(27, 30, 34);
+  width: 20%;
+  min-width: 320px;
+  height: 100%;
+  text-align: center;
+}
+.profile img {
+  display: block;
+  margin: 10% auto;
+  width: 60%;
+  border-radius: 50%/50%;
+}
+.profile div {
+  width: 90%;
+  margin: 5px;
+}
+.friends {
+  display: flex;
+  flex-wrap: wrap;
+}
+.friends img {
+  border-radius: 0px/0px;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  margin: 5px;
+}
+.links {
+  height: 100%;
+}
+.main {
+  width: 80%;
+}
+.main div {
+  color: white;
+  margin: 15px;
+  width: 80%;
+  background-color: rgb(48, 64, 136);
+  text-align: center;
+  border-radius: 25px/25px;
+}
+.main img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.main p {
+  text-align: justify;
+  padding: 0 15px;
+}
+.sidebar {
+  background-color: rgba(192, 163, 140, 0.85);
+  width: 25%;
+  min-width: 300px;
+  height: 78vh;
+  margin-right: 3vh;
+  margin-top: 3vh;
+}
+.sidebar div {
+  color: rgb(189, 208, 224);
+  margin: 5px;
+  width: 90%;
+  height: 150px;
+  background-color: black;
+}
+.cloud-chamber {
+  background-image: url(https://www.fzu.cz/sites/default/files/images/dag1.jpeg);
+  background-size: cover;
+  text-align: center;
+  line-height: 100px;
+}
+.double-slit {
+  background-image: url(https://hips.hearstapps.com/popularmechanics/assets/16/32/1470939110-feynmansdoub.png);
+  background-size: cover;
+  text-align: center;
+  line-height: 100px;
+}
+.pulsar {
+  background-image: url(https://images.saymedia-content.com/.image/t_share/MTc0Mzg2MjY5NTEyOTM0NzYw/neutron-stars-pulsars-and-magnetars-or-the-odd-physics-of-extreme-stars.jpg);
+  background-size: cover;
+  text-align: center;
+  line-height: 100px;
+}
+.earth {
+  background-image: url(https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2021/12/20/istock-536685401-1-1062830-1639996596.jpg?itok=KOwR_D3Z);
+  background-size: cover;
+  text-align: center;
+  line-height: 100px;
+}
+.sidebar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
