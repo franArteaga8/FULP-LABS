@@ -1,7 +1,7 @@
-// Your Solution goes here
+/// Your Solution goes here
 console.log("Index.js load successfull");
 
-//Iteration 1
+///Iteration 1
 
 const person = {
   firstName: "Luis",
@@ -14,7 +14,7 @@ function fullName(person) {
 
 console.log(fullName(person));
 
-//Iteration 2 - Who is online?
+///Iteration 2 - Who is online?
 
 function onlineStatus(users) {
   let outputStatus = {};
@@ -62,7 +62,7 @@ console.log(
   ])
 );
 
-// Iteration 3 - Overheating
+/// Iteration 3 - Overheating
 
 function heatCheck(yourComputer, maxTemperatures) {
   const result = {};
@@ -100,3 +100,49 @@ var maxTemperatures = {
 };
 
 console.log(heatCheck(yourComputer, maxTemperatures));
+
+/// BONUS
+
+/// strCount()
+
+const strCount = (obj) => {
+  let count = 0;
+  const objValues = Object.values(obj);
+
+  for (let i = 0; i < objValues.length; i++) {
+    if (typeof objValues[i] === "string") {
+      count++;
+    } else if (
+      typeof objValues[i] === "object" &&
+      Array.isArray(objValues[i])
+    ) {
+      for (let j = 0; j < objValues[i].length; j++) {
+        typeof objValues[i][j] === "string" ? count++ : null;
+      }
+    }
+  }
+
+  return count;
+};
+
+console.log(
+  strCount({
+    first: "1",
+    second: "2",
+    third: false,
+    fourth: ["anytime", 2, 3, 4],
+    fifth: null,
+  })
+);
+// returns 3
+
+///fullNameFormatted(person)
+
+const personBonus = {
+  firstName: "Luis",
+  lastName: "Burón",
+};
+
+function fullNameFormatted(personBonus) {
+  return personBonus.firstName + " " + personBonus.lastName;
+}
