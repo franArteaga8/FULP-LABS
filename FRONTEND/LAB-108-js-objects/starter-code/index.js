@@ -134,15 +134,26 @@ console.log(
     fifth: null,
   })
 );
-// returns 3
 
-///fullNameFormatted(person)
+///fullNameFormatted(person) & fullNameFormattedv2(person)
 
-const personBonus = {
+const personBonus2 = {
   firstName: "Luis",
   lastName: "Burón",
 };
 
-function fullNameFormatted(personBonus) {
-  return personBonus.firstName + " " + personBonus.lastName;
-}
+const personBonus3 = {
+  firstName: "Luis Álvaro",
+  lastName: "burón mejías",
+};
+
+const fullNameFormatted = (person) => {
+  const fullName = person.firstName + " " + person.lastName;
+  return fullName
+    .split(" ")
+    .map((n) => n[0].toUpperCase() + n.slice(1))
+    .join(" ");
+};
+
+console.log(fullNameFormatted(personBonus2));
+console.log(fullNameFormatted(personBonus3));
